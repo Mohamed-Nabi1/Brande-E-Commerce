@@ -1,0 +1,23 @@
+LOGIN PAGE IMAGE IMPLEMENTATION INSTRUCTIONS
+
+1. Save the provided Brande login background image to:
+   Downloads\ecommerce-front\Ecommerce_Front-main\ForntEnd\src\assets\brande-login-bg.jpg
+
+2. The code has been updated to reference this image file in:
+   - Login component CSS as a background image
+
+3. The image features:
+   - The Brande logo with a blue "B" followed by "rande" in dark text
+   - Blue wave patterns at the bottom
+   - Light blue dots in the background
+   - Clean, modern design suitable for a luxury fashion brand login page
+
+4. The login form has been updated with:
+   - Blue color scheme matching the Brande logo (#2196F3)
+   - Semi-transparent overlay for the welcome text
+   - Consistent styling throughout the form
+
+5. If the image doesn't appear, please check that:
+   - The image file is saved in the correct location
+   - The file name matches exactly: brande-login-bg.jpg
+   - The image format is JPG/JPEG

@@ -1,0 +1,22 @@
+<!-- <div class="container">
+    <div class="row justify-content-center">
+        <div class="card bg-dark 5 col-md-5 p-0 mt-2 mb-2 me-4 border-0" *ngFor="let category of subCat">
+            <img src={{category.image}} class="card-img border-0" alt="Stony Beach" />
+            <div class="card-img-overlay">
+                <h3 class="card-title">{{category.name}}</h3>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="card col-md-3 p-0 mt-2 mb-2 me-1 border-0" *ngFor="let category of subCat" style="height: 400px;">
+            <img src={{category.image}} class=" card-img border-0" alt="Stony Beach"
+                style="object-fit:cover;width: 100%;height: 100%;" />
+            <div class="card-img-overlay">
+                <h3 class="card-title">{{category.name}}</h3>
+            </div>
+        </div>
+    </div>
+</div>

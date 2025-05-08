@@ -1,0 +1,71 @@
+[
+  {
+    "Id": "07d96ed8-155d-49c7-a77a-615f109d77c3",
+    "FirstName": "John",
+    "MiddleName": "E",
+    "LastName": "Doe",
+    "Email": "johndoe@example.com",
+    "Address": {
+      "Street": "123 Main St",
+      "City": "New York",
+      "Country": "USA"
+    },
+    "PaymentCardInfo": {
+      "CardNumber": "1234567890123456",
+      "ExpiryDate": "12/24"
+    },
+    "WishList": {},
+    "Phones": [
+      {
+        "PhoneNumber": "123-456-7890"
+      }
+    ],
+    "Reviews": []
+  },
+  {
+    "Id": "c7d3e80a-7a4a-4c54-91a6-89c0df051c94",
+    "FirstName": "Jane",
+    "MiddleName": "A",
+    "LastName": "Smith",
+    "Email": "janesmith@example.com",
+    "Address": {
+      "Street": "456 Elm St",
+      "City": "Los Angeles",
+      "Country": "USA"
+    },
+    "PaymentCardInfo": {
+      "CardNumber": "9876543210987654",
+      "ExpiryDate": "06/23"
+    },
+    "WishList": {},
+    "Phones": [
+      {
+        "PhoneNumber": "111-222-3333"
+      }
+    ],
+    "Reviews": []
+  },
+  {
+    "Id": "74f5b2b3-3d10-4a85-93b5-8c6d0c992bb8",
+    "FirstName": "Alex",
+    "MiddleName": "",
+    "LastName": "Johnson",
+    "Email": "alexjohnson@example.com",
+    "Address": {
+      "Street": "789 Oak St",
+      "City": "Chicago",
+      "Country": "USA"
+    },
+    "PaymentCardInfo": {
+      "CardNumber": "5432167890123456",
+      "ExpiryDate": "09/25"
+    },
+    "WishList": {},
+    "Phones": [
+      {
+        "PhoneNumber": "777-888-9999"
+      }
+    ],
+    "Reviews": []
+  }
+]

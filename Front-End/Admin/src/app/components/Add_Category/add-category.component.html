@@ -1,0 +1,202 @@
+<div class="container rounded bg-white mt-5 mb-5 border">
+  <div class="row">
+    <h1 class="d-flex justify-content-center">Add Category</h1>
+    <hr />
+    <form
+      [formGroup]="validFrm"
+      (ngSubmit)="addCategory(PName.value, PDescription.value, PCat.value)"
+    >
+      <div class="row g-3">
+        <div class="col-sm-6">
+          <label for="PName">Name</label>
+          <input
+            #PName
+            type="text"
+            class="form-control w-100"
+            id="PName"
+            formControlName="PName"
+            placeholder="Category Name"
+            required
+          />
+          <div
+            class="form-control-feedback"
+            *ngIf="
+              validFrm.get('PName')?.hasError('required') &&
+              (validFrm.get('PName')?.dirty || validFrm.get('PName')?.touched)
+            "
+          >
+            <p
+              *ngIf="validFrm?.get('PName')?.errors?.['required']"
+              class="text-danger"
+            >
+              this field is required
+            </p>
+            <p
+              *ngIf="validFrm?.get('PName')?.errors?.['minlength']"
+              class="text-danger"
+            >
+              Category name must be more than 3 letters
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <label for="PDescription">Description</label>
+          <input
+            #PDescription
+            type="text"
+            class="form-control w-100"
+            id="PDescription"
+            formControlName="PDescription"
+            placeholder="Description"
+            required
+          />
+          <div
+            class="form-control-feedback"
+            *ngIf="
+              validFrm.get('PDescription')?.errors &&
+              (validFrm.get('PDescription')?.dirty ||
+                validFrm.get('PDescription')?.touched)
+            "
+          >
+            <p
+              *ngIf="validFrm?.get('PDescription')?.errors?.['required']"
+              class="text-danger"
+            >
+              this field is required
+            </p>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div>
+            <label for="PCat">Categories</label>
+            <div class="pb-2">
+              <select
+                [(ngModel)]="selectedParentId"
+                (ngModelChange)="onItemSelected()"
+                #PCat
+                name="PCat"
+                id="PCat"
+                class="form-select"
+                aria-label="Default select example"
+                formControlName="PCat"
+              >
+                <option>Select Category</option>
+                <option *ngFor="let item of ParentCategories" [value]="item.id">
+                  {{ item.name }}
+                </option>
+              </select>
+              <div
+                class="form-control-feedback"
+                *ngIf="
+                  validFrm.get('PCat')?.errors &&
+                  (validFrm.get('PCat')?.dirty || validFrm.get('PCat')?.touched)
+                "
+              >
+                <p
+                  *ngIf="validFrm?.get('PCat')?.errors?.['required']"
+                  class="text-danger"
+                >
+                  this field is required
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="form-control-feedback"
+              *ngIf="
+                validFrm.get('PSubCat')?.errors &&
+                (validFrm.get('PSubCat')?.dirty ||
+                  validFrm.get('PSubCat')?.touched)
+              "
+            >
+              <p
+                *ngIf="validFrm?.get('PSubCat')?.errors?.['required']"
+                class="text-danger"
+              >
+                this field is required
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <label for="PIMGS">Image</label>
+
+          <input
+            #PIMGS
+            formControlName="PIMGS"
+            type="file"
+            class="form-control"
+          />
+          <img src="" alt="" />
+          <!-- <div
+                  class="form-control-feedback"
+                  *ngIf="
+                    validFrm.get('PIMGS')?.errors &&
+                    (validFrm.get('PIMGS')?.dirty ||
+                      validFrm.get('PIMGS')?.touched)
+                  "
+                >
+                  <p
+                    *ngIf="validFrm?.get('PIMGS')?.errors?.['required']"
+                    class="text-danger"
+                  >
+                    this field is required
+                  </p>
+                </div> -->
+        </div>
+
+        <div class="d-flex justify-content-center mt-3 text-center m-auto">
+          <button type="submit" class="button">
+            <span class="button__text">Add Category</span>
+            <span class="button__icon"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke="currentColor"
+                height="24"
+                fill="none"
+                class="svg"
+              >
+                <line y2="19" y1="5" x2="12" x1="12"></line>
+                <line y2="12" y1="12" x2="19" x1="5"></line></svg
+            ></span>
+          </button>
+        </div>
+        <div class="d-flex justify-content-center mt-3 text-center m-auto">
+          <button type="submit" class="button" (click)="goCategoryList()">
+            <span class="button__text text-center justify-content-center">
+              List</span
+            >
+            <span class="button__icon"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke="currentColor"
+                height="24"
+                fill="none"
+                class="svg"
+              >
+                <line y2="19" y1="5" x2="12" x1="12"></line>
+                <line y2="12" y1="12" x2="19" x1="5"></line></svg
+            ></span>
+          </button>
+        </div>
+        <div
+          class="text-danger mt-2 d-flex justify-content-center"
+          *ngIf="validFrm.invalid && validFrm.touched && !isSuccess"
+        >
+          Please fill in all the required fields.
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

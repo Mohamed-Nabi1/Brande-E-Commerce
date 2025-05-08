@@ -1,0 +1,80 @@
+## Ignore Visual Studio temporary files, build results, and
+## user-specific files
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Uncomment if using ASP.NET Scaffolding
+# ScaffoldingReadMe.txt
+
+# Visual Studio for Mac
+.vscode/
+.idea/
+*.pidb
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code settings
+.vscode/
+
+# DotCover
+.idea/
+*.dotCover
+
+# ASP.NET Publish folder
+publish/
+out/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+**/packages/*
+!**/packages/build/
+!**/packages/repositories.config
+
+# Microsoft Azure Web App publish settings
+*.PublishSettings
+
+# Rider
+.idea/
+
+# JetBrains Rider settings
+.idea/
+
+# Local History for Rider
+.idea/.idea.LocalHistory/
+
+# Resharper
+*.DotSettings.user
+
+# Other
+*.log
+*.tmp

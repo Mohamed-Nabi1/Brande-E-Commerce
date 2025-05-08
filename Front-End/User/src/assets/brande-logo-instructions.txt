@@ -1,0 +1,11 @@
+The SVG logo has been created, but for better compatibility across browsers and platforms, you should convert this SVG to PNG format.
+
+You can do this using any online SVG to PNG converter or using software like Adobe Illustrator, Inkscape, or GIMP.
+
+The logo design features:
+1. An elegant stylized "B" in green (#0aad0a) as the main symbol
+2. The word "RANDE" in a sophisticated black typography
+3. A thin green line as a decorative element
+4. "LUXURY FASHION" tagline in small caps
+
+This design aims to convey luxury, elegance, and sophistication appropriate for a high-end fashion brand.

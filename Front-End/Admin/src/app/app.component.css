@@ -1,0 +1,23 @@
+.circle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  animation: toggleBackground 2s linear infinite;
+  padding-top: 3000px;
+  padding-right: 10px;
+}
+
+@keyframes toggleBackground {
+  0%,
+  100% {
+    box-shadow: 0 0 10px 5px lightgray;
+  }
+  50% {
+    box-shadow: 0 0 20px 10px lightgray, 0 0 30px 15px yellow;
+  }
+}
+
+.logo {
+  padding-right: 4px;
+  padding-bottom: 12px;
+}

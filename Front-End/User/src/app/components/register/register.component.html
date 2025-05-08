@@ -1,0 +1,214 @@
+<!-- Modern Register Page -->
+<div class="auth-page register-page">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="auth-card">
+          <div class="row g-0">
+            <!-- Left Side - Brande Design -->
+            <div class="col-md-5 auth-image-container d-none d-md-block">
+              <div class="auth-image brande-register-bg">
+                <!-- Decorative Dots -->
+                <div class="dot dot1"></div>
+                <div class="dot dot2"></div>
+                <div class="dot dot3"></div>
+                <div class="dot dot4"></div>
+                <div class="dot dot5"></div>
+
+                <!-- Brande Logo -->
+                <div class="brande-logo-container">
+                  <div class="brande-logo-register">
+                    <span class="logo-b">B</span><span class="logo-text">rande</span><span class="logo-paren">)</span>
+                  </div>
+                </div>
+
+                <!-- Wave Animation -->
+                <div class="wave-container">
+                  <div class="wave wave1"></div>
+                  <div class="wave wave2"></div>
+                </div>
+
+                <!-- Welcome Message -->
+                <div class="auth-quote">
+                  <h3>Join Our Community</h3>
+                  <p>Create an account to enjoy personalized shopping experiences and exclusive offers.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Side - Form -->
+            <div class="col-md-7">
+              <div class="auth-form-container">
+                <div class="auth-header">
+                  <h2 class="auth-title">Create Account</h2>
+                  <p class="auth-subtitle">Please fill in your details to get started</p>
+                </div>
+              <form class="auth-form" [formGroup]="validFrm" (ngSubmit)="AddNewCustomer()">
+
+                <!-- Name Fields -->
+                <div class="row mb-3">
+                  <!-- First Name -->
+                  <div class="col-md-4">
+                    <div class="form-floating mb-3">
+                      <input #fname formControlName="fname" (keypress)="keyPressMinLength($event,15)" type="text"
+                        class="form-control" id="fname" placeholder="First Name" required
+                        [ngClass]="{'is-invalid': validFrm.get('fname')?.errors && (validFrm.get('fname')?.dirty || validFrm.get('fname')?.touched)}">
+                      <label for="fname">First name</label>
+                      <div class="invalid-feedback">
+                        <span *ngIf="validFrm?.get('fname')?.errors?.['required']">First name is required</span>
+                        <span *ngIf="validFrm?.get('fname')?.errors?.['minlength']">First name must be 3 letters or more</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Middle Name -->
+                  <div class="col-md-4">
+                    <div class="form-floating mb-3">
+                      <input [(ngModel)]="mname" (keypress)="keyPressMinLength($event,15)" type="text"
+                        class="form-control" id="mname" placeholder="Middle Name" formControlName="mname">
+                      <label for="mname">Middle name</label>
+                    </div>
+                  </div>
+
+                  <!-- Last Name -->
+                  <div class="col-md-4">
+                    <div class="form-floating mb-3">
+                      <input #lname formControlName="lname" (keypress)="keyPressMinLength($event,15)" type="text"
+                        class="form-control" id="lname" placeholder="Last name" required
+                        [ngClass]="{'is-invalid': validFrm.get('lname')?.errors && (validFrm.get('lname')?.dirty || validFrm.get('lname')?.touched)}">
+                      <label for="lname">Last name</label>
+                      <div class="invalid-feedback">
+                        <span *ngIf="validFrm?.get('lname')?.errors?.['required']">Last name is required</span>
+                        <span *ngIf="validFrm?.get('lname')?.errors?.['minlength']">Last name must be 3 letters or more</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-floating mb-3">
+                  <input #email formControlName="email" (keypress)="keyPressMinLength($event,35)" type="email"
+                    class="form-control" id="email" placeholder="Email" required
+                    [ngClass]="{'is-invalid': validFrm.get('email')?.errors && (validFrm.get('email')?.dirty || validFrm.get('email')?.touched)}">
+                  <label for="email">Email address</label>
+                  <div class="invalid-feedback">
+                    <span *ngIf="validFrm?.get('email')?.errors?.['required']">Email is required</span>
+                    <span *ngIf="validFrm?.get('email')?.errors?.['pattern']">Please enter a valid email address</span>
+                  </div>
+                </div>
+
+                <!-- Password Field -->
+                <div class="form-floating mb-3 password-field">
+                  <input #password formControlName="password" (keypress)="keyPressMinLength($event,50)"
+                    [type]="showPassword ? 'text' : 'password'" class="form-control" id="password"
+                    placeholder="Password" required
+                    [ngClass]="{'is-invalid': validFrm.get('password')?.errors && (validFrm.get('password')?.dirty || validFrm.get('password')?.touched)}">
+                  <label for="password">Password</label>
+                  <button type="button" class="password-toggle" (click)="togglePassword()">
+                    <i [ngClass]="showPassword ? 'fa fa-eye' : 'fa fa-eye-slash'"></i>
+                  </button>
+                  <div class="invalid-feedback">
+                    <span *ngIf="validFrm?.get('password')?.errors?.['required']">Password is required</span>
+                    <span *ngIf="validFrm?.get('password')?.errors?.['minlength']">Password must be at least 8 characters</span>
+                  </div>
+                </div>
+
+
+                <!-- Phone Field -->
+                <div class="form-floating mb-3">
+                  <input #phonenumber formControlName="phonenumber" (keypress)="keyPressNumbers($event,25)" type="text"
+                    class="form-control" id="phonenumber" placeholder="Phone number" required
+                    [ngClass]="{'is-invalid': validFrm.get('phonenumber')?.errors && (validFrm.get('phonenumber')?.dirty || validFrm.get('phonenumber')?.touched)}">
+                  <label for="phonenumber">Phone number</label>
+                  <div class="invalid-feedback">
+                    <span *ngIf="validFrm?.get('phonenumber')?.errors?.['required']">Phone number is required</span>
+                    <span *ngIf="validFrm?.get('phonenumber')?.errors?.['minlength']">Phone number must be more than 8 digits</span>
+                  </div>
+                </div>
+
+                <!-- Country Field -->
+                <div class="form-floating mb-3">
+                  <select [(ngModel)]="selectedCountry" #country formControlName="country" class="form-select"
+                    id="country" placeholder="Country" required
+                    [ngClass]="{'is-invalid': validFrm.get('country')?.errors && (validFrm.get('country')?.dirty || validFrm.get('country')?.touched)}">
+                    <option value="" disabled selected>Select your country</option>
+                    <option *ngFor="let country of Countries" [ngValue]="Countries.indexOf(country)">{{country}}</option>
+                  </select>
+                  <label for="country">Country</label>
+                  <div class="invalid-feedback">
+                    <span *ngIf="validFrm?.get('country')?.errors?.['required']">Country is required</span>
+                  </div>
+                </div>
+
+
+                <!-- Address Section -->
+                <div class="address-section mb-3">
+                  <h5 class="section-subtitle">Address Information</h5>
+
+                  <div class="row">
+                    <!-- City Field -->
+                    <div class="col-md-6">
+                      <div class="form-floating mb-3">
+                        <input #city formControlName="city" (keypress)="keyPressMinLength($event,15)" type="text"
+                          class="form-control" id="city" placeholder="City" required
+                          [ngClass]="{'is-invalid': validFrm.get('city')?.errors && (validFrm.get('city')?.dirty || validFrm.get('city')?.touched)}">
+                        <label for="city">City</label>
+                        <div class="invalid-feedback">
+                          <span *ngIf="validFrm?.get('city')?.errors?.['required']">City is required</span>
+                          <span *ngIf="validFrm?.get('city')?.errors?.['minlength']">City must be more than 3 letters</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Street Field -->
+                    <div class="col-md-6">
+                      <div class="form-floating mb-3">
+                        <input #street formControlName="street" (keypress)="keyPressMinLength($event,20)" type="text"
+                          class="form-control" id="street" placeholder="Street" required
+                          [ngClass]="{'is-invalid': validFrm.get('street')?.errors && (validFrm.get('street')?.dirty || validFrm.get('street')?.touched)}">
+                        <label for="street">Street</label>
+                        <div class="invalid-feedback">
+                          <span *ngIf="validFrm?.get('street')?.errors?.['required']">Street is required</span>
+                          <span *ngIf="validFrm?.get('street')?.errors?.['minlength']">Street must be more than 3 letters</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-brande w-100 mb-4">
+                  <i class="fas fa-user-plus me-2"></i> Create Account
+                </button>
+
+                <!-- Login Link -->
+                <div class="auth-footer text-center">
+                  <p>Already have an account? <a routerLink="/login" class="login-link">Sign In</a></p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" tabindex="-1" role="dialog" [ngClass]="displayAlert">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"> {{ FlagError ? 'Alert' : 'Done' }}</h4>
+      </div>
+      <div class="modal-body">
+        {{ message }}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning" (click)="closePopup()">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

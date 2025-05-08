@@ -1,0 +1,332 @@
+<!-- <section id="collection" class="py-5">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-md-3">
+        <button class="btn m-3 custom-button" (click)="GetAll()">All Products</button>
+      </div>
+      <div class="col-md-8">
+        <ul class="nav nav-tabs d-flex justify-content-center border-0 collection-tabs">
+          <li class="nav-item" *ngFor="let category of subCategories">
+            <button class="btn m-3 custom-button" value="{{category.id}}" (click)="getProductsbyCategory(category.id)">
+              {{ category.name }}
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+      <div id="page-content-wrapper">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-3 col-sm-6" *ngFor="let product of productsofSub">
+              <div class="card product-card" style="width: 280px;">
+                <a routerLink="/products/Details/{{ product.id }}">
+                  <img [src]="product.productImages[0].imageURL" class="card-img-top" alt="Product Image" style="object-fit: cover; width: 280px; height: 330px;">
+                </a>
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div>
+                    <ul class="list-unstyled d-flex justify-content-between mb-2">
+                      <li>
+                        <i class="text-warning fa fa-star"></i>
+                        <i class="text-warning fa fa-star"></i>
+                        <i class="text-warning fa fa-star"></i>
+                        <i class="text-muted fa fa-star"></i>
+                        <i class="text-muted fa fa-star"></i>
+                      </li>
+                      <li class="text-muted" style="font-size: 18px;">{{ product.price * (1 - product.discount) | number:'1.0-2' }} EGP</li>
+                    </ul>
+                    <a class="h6 text-decoration-none text-dark" style="height: 60px; overflow: hidden;">{{ product.name }}</a>
+                  </div>
+                  <div>
+                    <p class="card-text small text-muted" style="height: 80px; overflow: hidden;">{{ product.description }}</p>
+                    <p class="card-text text-muted">Reviews (20)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</section> -->
+
+<!-- Products Page with Modern Design -->
+<div class="products-page">
+  <!-- Page Header -->
+  <div class="page-header bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h1 class="page-title">{{ categoryName || 'All Products' }}</h1>
+          <!-- Search indicator -->
+          <div *ngIf="isSearching" class="search-indicator mb-2">
+            <span class="badge bg-primary">
+              <i class="fas fa-search me-1"></i> Search Results
+            </span>
+          </div>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <ng-container *ngIf="breadcrumbPath.includes('/')">
+                <ng-container *ngFor="let item of breadcrumbPath.split(' / '); let last = last; let i = index">
+                  <li class="breadcrumb-item" *ngIf="!last">
+                    <a [routerLink]="item === 'Home' ? '/' :
+                                     item === 'Products' ? '/products' :
+                                     item === 'Men' ? '/products/men' :
+                                     item === 'Women' ? '/products/women' :
+                                     item === 'Kids' ? '/products/kids' : '/'">
+                      {{ item }}
+                    </a>
+                  </li>
+                  <li class="breadcrumb-item active" *ngIf="last" aria-current="page">{{ item }}</li>
+                </ng-container>
+              </ng-container>
+            </ol>
+          </nav>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <div class="product-count">
+            <span>Showing {{ productsofSub?.length || 0 }} products</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container py-5">
+    <div class="row">
+      <!-- Filters Sidebar - Only show on category pages (Men, Women, Kids) -->
+      <div class="col-lg-3" *ngIf="!isAllProducts">
+        <div class="filters-wrapper">
+          <div class="filters-header d-flex justify-content-between align-items-center mb-4">
+            <h4 class="filters-title mb-0">Filters</h4>
+            <button class="btn btn-sm btn-outline-secondary" (click)="clear($event)">
+              <i class="fas fa-sync-alt me-1"></i> Reset
+            </button>
+          </div>
+
+          <!-- Filter Groups -->
+          <div class="filter-group">
+            <h5 class="filter-group-title" data-bs-toggle="collapse" data-bs-target="#categoryFilter" aria-expanded="true">
+              <i class="fas fa-tshirt me-2"></i> Product Type
+              <i class="fas fa-chevron-down float-end"></i>
+            </h5>
+            <div class="collapse show" id="categoryFilter">
+              <div class="filter-options">
+                <div class="form-check" *ngFor="let category of originSubCateories">
+                  <input class="form-check-input" type="checkbox" id="category-{{category.id}}"
+                    (change)="fiterdataBySubCategory($event)" [value]="category.id">
+                  <label class="form-check-label" for="category-{{category.id}}">
+                    {{ category.name }}
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <h5 class="filter-group-title" data-bs-toggle="collapse" data-bs-target="#colorFilter" aria-expanded="true">
+              <i class="fas fa-palette me-2"></i> Color
+              <i class="fas fa-chevron-down float-end"></i>
+            </h5>
+            <div class="collapse show" id="colorFilter">
+              <div class="filter-options">
+                <div class="color-options">
+                  <div class="form-check" *ngFor="let col of Colors">
+                    <input class="form-check-input" type="checkbox" id="color-{{col}}"
+                      (change)="fiterdataByColor($event)" [value]="col">
+                    <label class="form-check-label" for="color-{{col}}">
+                      <span class="color-swatch" [style.background-color]="col"></span>
+                      {{ col }}
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <h5 class="filter-group-title" data-bs-toggle="collapse" data-bs-target="#sizeFilter" aria-expanded="true">
+              <i class="fas fa-ruler me-2"></i> Size
+              <i class="fas fa-chevron-down float-end"></i>
+            </h5>
+            <div class="collapse show" id="sizeFilter">
+              <div class="filter-options">
+                <div class="size-options">
+                  <div class="btn-group" role="group">
+                    <ng-container *ngFor="let si of Sizes">
+                      <input type="checkbox" class="btn-check" id="size-{{si}}" autocomplete="off"
+                        (change)="fiterdataBySize($event)" [value]="si">
+                      <label class="btn btn-outline-secondary size-btn" for="size-{{si}}">{{si}}</label>
+                    </ng-container>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <h5 class="filter-group-title" data-bs-toggle="collapse" data-bs-target="#priceFilter" aria-expanded="true">
+              <i class="fas fa-tag me-2"></i> Price Range
+              <i class="fas fa-chevron-down float-end"></i>
+            </h5>
+            <div class="collapse show" id="priceFilter">
+              <div class="filter-options">
+                <div class="price-slider">
+                  <div class="price-inputs d-flex justify-content-between">
+                    <div class="form-floating mb-3">
+                      <input type="number" class="form-control" id="minPrice" placeholder="Min">
+                      <label for="minPrice">Min</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input type="number" class="form-control" id="maxPrice" placeholder="Max">
+                      <label for="maxPrice">Max</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" (click)="FilterCombo()" class="btn btn-primary w-100 mt-3">
+            <i class="fas fa-filter me-2"></i> Apply Filters
+          </button>
+        </div>
+      </div>
+
+      <!-- Products Grid - Full width on All Products page, partial width on category pages -->
+      <div [ngClass]="isAllProducts ? 'col-lg-12' : 'col-lg-9'">
+        <!-- Sorting Options -->
+        <div class="sorting-options mb-4">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <div class="view-options">
+                <button class="btn btn-sm btn-outline-secondary me-2"
+                        [class.active]="viewMode === 'grid'"
+                        (click)="toggleView('grid')">
+                  <i class="fas fa-th-large"></i>
+                </button>
+                <button class="btn btn-sm btn-outline-secondary"
+                        [class.active]="viewMode === 'list'"
+                        (click)="toggleView('list')">
+                  <i class="fas fa-list"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="sort-options d-flex justify-content-md-end">
+                <select class="form-select form-select-sm" (change)="onSortChange($event)">
+                  <option value="featured" selected>Sort by: Featured</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="newest">Newest First</option>
+
+                  <option value="name-az">Name: A to Z</option>
+                  <option value="name-za">Name: Z to A</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Products Grid/List View -->
+        <div class="row g-4" [ngClass]="{'products-grid': viewMode === 'grid', 'products-list': viewMode === 'list'}">
+          <!-- Grid View -->
+          <div [ngClass]="viewMode === 'grid' ? 'col-md-6 col-lg-4' : 'col-12'" *ngFor="let product of productsofSub">
+            <div class="product-card" [ngClass]="{'product-card-list': viewMode === 'list'}">
+              <div class="product-badge" *ngIf="product.discount > 0" [ngClass]="{'high-discount': product.discount >= 0.2}">
+                <i class="fas fa-tags me-1"></i> {{(product.discount * 100).toFixed(0)}}% OFF
+              </div>
+              <div class="product-wishlist">
+                <button class="wishlist-btn" [ngClass]="{'active': isInWishlist(product.id)}" (click)="toggleWishlist($event, product.id)">
+                  <i [ngClass]="isInWishlist(product.id) ? 'fas fa-heart' : 'far fa-heart'"></i>
+                </button>
+              </div>
+              <div class="product-image" [ngClass]="{'product-image-list': viewMode === 'list'}">
+                <a routerLink="/products/Details/{{ product.id }}">
+                  <img [src]="product.productImages[0].imageURL" class="img-fluid" alt="{{ product.name }}">
+                </a>
+                <div class="product-actions">
+                  <a routerLink="/products/Details/{{ product.id }}" class="btn btn-primary">
+                    <i class="fas fa-eye me-1"></i> View Details
+                  </a>
+                </div>
+              </div>
+              <div class="product-info" [ngClass]="{'product-info-list': viewMode === 'list'}">
+                <h3 class="product-title">
+                  <a routerLink="/products/Details/{{ product.id }}">{{ product.name }}</a>
+                </h3>
+               
+                <div class="product-price">
+                  <span class="current-price">{{ product.price * (1 - product.discount) | number:'1.0-2' }} EGP</span>
+                  <span class="old-price" *ngIf="product.discount > 0">{{ product.price | number:'1.0-2' }} EGP</span>
+                </div>
+                <div class="product-colors">
+                  <span class="color-dot" style="background-color: #3f51b5;"></span>
+                  <span class="color-dot" style="background-color: #f50057;"></span>
+                  <span class="color-dot" style="background-color: #4caf50;"></span>
+                </div>
+                <!-- Description only shown in list view -->
+                <div class="product-description" *ngIf="viewMode === 'list'">
+                  <p>{{ product.description | slice:0:150 }}{{ product.description.length > 150 ? '...' : '' }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-state text-center py-5" *ngIf="!productsofSub || productsofSub.length === 0">
+          <i class="fas fa-search fa-3x mb-3 text-muted"></i>
+          <h3>No products found</h3>
+          <p class="text-muted" *ngIf="isSearching">
+            No products match your search for "{{ searchQuery }}". Try a different search term.
+          </p>
+          <p class="text-muted" *ngIf="!isSearching">
+            Try adjusting your filters or search criteria
+          </p>
+          <button class="btn btn-primary me-2" *ngIf="isSearching" routerLink="/products">
+            View All Products
+          </button>
+          <button class="btn btn-primary" (click)="clear($event)">
+            {{ isSearching ? 'Clear Search' : 'Clear Filters' }}
+          </button>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination-wrapper mt-5" *ngIf="allProducts && allProducts.length > itemsPerPage">
+          <nav aria-label="Product pagination">
+            <ul class="pagination justify-content-center">
+              <!-- Previous page button -->
+              <li class="page-item" [class.disabled]="currentPage === 1">
+                <a class="page-link" href="javascript:void(0)" (click)="changePage(currentPage - 1)" tabindex="-1" [attr.aria-disabled]="currentPage === 1">
+                  <i class="fas fa-chevron-left"></i>
+                </a>
+              </li>
+
+              <!-- Page numbers -->
+              <li class="page-item" *ngFor="let page of getPageNumbers()" [class.active]="page === currentPage">
+                <ng-container *ngIf="page > 0; else ellipsis">
+                  <a class="page-link" href="javascript:void(0)" (click)="changePage(page)">{{ page }}</a>
+                </ng-container>
+                <ng-template #ellipsis>
+                  <span class="page-link">...</span>
+                </ng-template>
+              </li>
+
+              <!-- Next page button -->
+              <li class="page-item" [class.disabled]="currentPage === totalPages">
+                <a class="page-link" href="javascript:void(0)" (click)="changePage(currentPage + 1)" [attr.aria-disabled]="currentPage === totalPages">
+                  <i class="fas fa-chevron-right"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

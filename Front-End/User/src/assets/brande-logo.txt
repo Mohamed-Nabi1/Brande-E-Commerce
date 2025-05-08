@@ -1,0 +1,5 @@
+Since I can't directly save the image file from the chat, please save the provided Brande logo image to:
+
+Downloads\ecommerce-front\Ecommerce_Front-main\ForntEnd\src\assets\brande-logo.png
+
+The logo features a blue "B" followed by "rande" in dark gray text with a closing parenthesis.

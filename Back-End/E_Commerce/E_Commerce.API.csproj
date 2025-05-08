@@ -1,0 +1,203 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Images\0174ed49-d219-4021-b61f-ae86d8e2d565.jpeg" />
+    <Content Include="Images\02539696-5659-4f37-9119-a769b64de9ad.jpeg" />
+    <Content Include="Images\02ae182a-fe63-4ddb-a45c-0813540a05c4.jpeg" />
+    <Content Include="Images\037bce39-b683-458e-8034-7e72e8e84a1c.jpeg" />
+    <Content Include="Images\0457c20c-3b7e-4ed8-845f-40dda4905ccb.png" />
+    <Content Include="Images\04fb0406-c91b-4d90-940a-da37f3be92d2.jpeg" />
+    <Content Include="Images\053d5d36-2c29-4232-a09f-332f250d6eea.png" />
+    <Content Include="Images\059ebaa2-065a-48d8-8a5c-f9bc83e21970.jpeg" />
+    <Content Include="Images\07234db7-84b0-450a-98be-3091f8d730e8.jpeg" />
+    <Content Include="Images\081314ca-f5f3-4c3c-b0c0-f6d931bd9e60.png" />
+    <Content Include="Images\0a6ba274-2dae-4cba-aee8-752b87bfe5cb.png" />
+    <Content Include="Images\10f6d9a1-0dfe-4e7a-9a93-5cc18d077670.png" />
+    <Content Include="Images\11c2fda7-1abb-4d72-8fc0-1339866e7205.png" />
+    <Content Include="Images\16a8278b-138b-4361-b313-a99dd84a9aa3.jpeg" />
+    <Content Include="Images\1701b608-a88a-4f0d-b09d-7d878e601d46.png" />
+    <Content Include="Images\181b048d-fcfe-47a0-b26c-4e299c88eb71.jpeg" />
+    <Content Include="Images\18244e19-601d-43fa-a45b-4a12f8873c87.jpeg" />
+    <Content Include="Images\1853d028-e8d3-4a22-a5ef-8b6193b65710.jpeg" />
+    <Content Include="Images\18f3ffe8-745e-41be-8872-a259ce38067d.jpeg" />
+    <Content Include="Images\193de72f-1b7e-4ebb-bf0c-440996ab2de5.png" />
+    <Content Include="Images\1cc7c746-0693-4c91-b964-af5bd9af4c90.jpeg" />
+    <Content Include="Images\25540af0-5e83-4543-8fde-2cb014840386.jpeg" />
+    <Content Include="Images\27ba76fe-de62-4f1a-848e-fc9376a23dcb.jpeg" />
+    <Content Include="Images\2f9bca23-c67b-4cd8-98d4-630ef50ae5c1.jpeg" />
+    <Content Include="Images\32078e55-5b9a-47e7-aa44-be8b9aeed143.jpeg" />
+    <Content Include="Images\329ba5b2-57bd-4f2a-9431-2290e68051c7.jpeg" />
+    <Content Include="Images\34c1ed07-22e5-49ab-9758-45594d496597.jpeg" />
+    <Content Include="Images\3578c038-aede-484d-83d5-1a1508c2527c.jpeg" />
+    <Content Include="Images\35bfbc71-7f76-482b-8100-31356941042a.png" />
+    <Content Include="Images\37899beb-fd2f-46a4-a557-9839bcc7709a.png" />
+    <Content Include="Images\38be948d-5ba4-4d26-9e4f-d6cac3a928a3.jpeg" />
+    <Content Include="Images\39f52a86-c988-4604-8dec-4983dedc2e48.jpeg" />
+    <Content Include="Images\3a31e71d-4317-4004-a516-3708211d0e74.png" />
+    <Content Include="Images\3ca41f6b-e294-4e7c-aa42-d45771e5430f.jpeg" />
+    <Content Include="Images\3cb6b44c-2945-48d3-bd3b-a95d9e288338.jpeg" />
+    <Content Include="Images\3d42c518-6e7a-4060-91e0-303edaf3d5fd.jpeg" />
+    <Content Include="Images\41045fa7-4ad8-4709-8fa5-a6bf3cefd9cc.png" />
+    <Content Include="Images\4120f7ae-344a-4627-86e7-d40d106323a5.jpeg" />
+    <Content Include="Images\4285e39a-b258-4956-a2dc-d23f6d5f1cca.png" />
+    <Content Include="Images\45ab41d2-6247-4e21-9713-fc525bff93cf.png" />
+    <Content Include="Images\4664e1ec-480b-4854-b9cb-d7930334f539.jpeg" />
+    <Content Include="Images\479737d1-c80b-46d8-9e5a-bdf30bb733d1.jpeg" />
+    <Content Include="Images\4a51e07c-af40-4155-89cc-e09d9e592c4e.png" />
+    <Content Include="Images\4b93b117-aff7-4222-9bb6-aef354ec3749.jpeg" />
+    <Content Include="Images\4da80693-03cf-4697-831e-1a458f503c83.jpeg" />
+    <Content Include="Images\51433233-f3eb-4f4f-9896-161146d480a2.jpeg" />
+    <Content Include="Images\518b4028-5224-4edd-8cb4-9c002a9b645d.png" />
+    <Content Include="Images\5330f1d7-c53f-4e10-abbe-547d9aaa9c77.jpeg" />
+    <Content Include="Images\536cd199-5501-4dc1-8421-602a8d5e7cc6.jpeg" />
+    <Content Include="Images\537644f1-5122-4ca9-80ad-812201b05707.jpeg" />
+    <Content Include="Images\56bbe168-2903-414b-9dcd-3d4f3d5d03f1.png" />
+    <Content Include="Images\59783e01-1d53-44d2-9e5b-42d743991503.jpeg" />
+    <Content Include="Images\5a000b3e-4ff1-4bee-b58e-6d1bdb6040fc.jpeg" />
+    <Content Include="Images\5bcb962e-2046-43cf-93e4-f9b8f50276ef.jpeg" />
+    <Content Include="Images\5d768312-2ee3-48b7-a7d1-830c508c4876.jpeg" />
+    <Content Include="Images\5d7bd914-c876-4147-afee-27359c73dc9a.jpeg" />
+    <Content Include="Images\5eddef17-b737-4e50-9903-2ada8e3412fd.jpeg" />
+    <Content Include="Images\607c9362-6eaf-418d-96a8-fd6cbcdef166.png" />
+    <Content Include="Images\61388d78-f395-4210-8e02-8896d51954d0.jpeg" />
+    <Content Include="Images\625b13b8-edc3-432d-8aa5-f8927a686c6c.png" />
+    <Content Include="Images\628ba594-f636-457a-bb69-8af05b410da5.jpeg" />
+    <Content Include="Images\62bf6f5b-cf21-4186-b26b-bfc2174f22d4.jpeg" />
+    <Content Include="Images\6305001f-9057-4fbb-80bb-2d4178be0411.jpeg" />
+    <Content Include="Images\64308704-f7ad-4762-af3f-7ba111d37227.jpeg" />
+    <Content Include="Images\66af7188-3fe5-4b60-886d-9356c937b9ff.jpeg" />
+    <Content Include="Images\66e0378b-ea22-4d66-95e7-3932f91e0e60.png" />
+    <Content Include="Images\684d5b1b-0cc6-47f8-9004-1c768cb8206b.jpeg" />
+    <Content Include="Images\6d75588b-0c42-4bc8-864d-ba24172e6112.jpeg" />
+    <Content Include="Images\6dd91d49-f8a4-41fc-bad7-a92220c19808.jpeg" />
+    <Content Include="Images\712fcb0c-c2bb-4be0-95b6-9412dc3429a2.jpeg" />
+    <Content Include="Images\725703b5-2e81-4ced-b136-d20588709394.jpeg" />
+    <Content Include="Images\746c5e6e-54be-4069-95e4-7316eca01885.jpeg" />
+    <Content Include="Images\76ecad59-88f8-483f-876e-aa0c37e9828b.png" />
+    <Content Include="Images\77e2ab07-b62d-4365-95ff-ea7eff509b2c.png" />
+    <Content Include="Images\77f37592-f3b3-4c16-bf4d-11b4d85ab01e.jpeg" />
+    <Content Include="Images\796013d9-5c8e-4b1c-995d-0df1ba9a59ef.jpeg" />
+    <Content Include="Images\7cbf6257-be70-4444-9e10-0c2859f357fc.jpeg" />
+    <Content Include="Images\7e2f2210-1bb6-4bba-8fab-b48be9137a7d.jpeg" />
+    <Content Include="Images\7e976f5f-dd75-4574-a48c-db39ab944566.jpeg" />
+    <Content Include="Images\7f2f037d-6603-4aa6-82b0-ed2538e7b185.jpeg" />
+    <Content Include="Images\81bc72fb-ee65-4fa3-8862-ebfa4b065aa8.jpeg" />
+    <Content Include="Images\83fbb8b4-275d-47bf-ae97-db15163650b8.jpeg" />
+    <Content Include="Images\844e37d7-7c80-42bf-94f5-23dba2cd4add.png" />
+    <Content Include="Images\8527c715-f689-4750-8a3d-8df5503941ac.jpeg" />
+    <Content Include="Images\86a6ef55-51f4-4b09-9e98-cab460e7c50a.png" />
+    <Content Include="Images\880f55ea-1bb2-4c84-9494-8b7d387a2ac9.jpeg" />
+    <Content Include="Images\8a4a2b8a-4d9b-4804-aa66-87e4a18fd119.jpeg" />
+    <Content Include="Images\8ae7fb56-8c84-48b8-ae5f-c8d7b8b90766.jpeg" />
+    <Content Include="Images\8bfc3ac1-a884-41e6-8585-64a9cca9796a.png" />
+    <Content Include="Images\8d706f58-3018-4814-9338-1bf15ef84e06.jpeg" />
+    <Content Include="Images\8e915166-cc4f-45ab-837a-96ef4ba38747.jpeg" />
+    <Content Include="Images\916c9155-0739-49f4-a77f-9b83797c8805.jpeg" />
+    <Content Include="Images\923f69cc-58f4-4b3c-bc5e-53eecacf1624.jpeg" />
+    <Content Include="Images\951cdffb-a349-44f3-bead-8b0510c606f1.jpeg" />
+    <Content Include="Images\99c5fab2-9b23-4c74-a8ee-7969e9081268.jpeg" />
+    <Content Include="Images\9a283ad3-4647-4ae1-9878-a662e156cfb1.jpeg" />
+    <Content Include="Images\9a299110-e2a3-4168-a435-515f4fd74608.jpeg" />
+    <Content Include="Images\9a8849ab-94da-4258-8399-e9d49bc58060.jpeg" />
+    <Content Include="Images\9a94f5e7-bee2-448d-a121-18301d6b534d.jpeg" />
+    <Content Include="Images\9bb6f673-25f4-4d0d-b8ed-02f17e413efa.jpeg" />
+    <Content Include="Images\a3f07aaf-2564-4be4-864e-ce54b7862e3b.jpeg" />
+    <Content Include="Images\a4743fc7-e47d-44f4-9f37-6886e68867ab.png" />
+    <Content Include="Images\a4d8b53a-f55a-484b-bbe6-646db6e6904c.png" />
+    <Content Include="Images\a69ce159-1f83-49d2-a3df-e89b1730256b.jpeg" />
+    <Content Include="Images\a8bcf212-9f56-4592-bcdd-cc929e814fb3.jpeg" />
+    <Content Include="Images\aaf711b7-dd88-48fb-89b8-d0b171a4efb5.jpeg" />
+    <Content Include="Images\ac1d7553-c198-4ef1-84f2-fbe77443f5b4.jpeg" />
+    <Content Include="Images\ac664ca4-ac32-4b21-97c5-e98de92392c3.jpeg" />
+    <Content Include="Images\ada4aa62-d480-4c5c-b88d-98acbe0f2ac7.jpeg" />
+    <Content Include="Images\ade4dcef-2553-4b71-aed3-b65eb36d8b9c.jpeg" />
+    <Content Include="Images\ae5ba867-4e12-49f3-a2f6-89ae34e20323.jpeg" />
+    <Content Include="Images\b1d6e528-374a-48e3-b630-637605a50c8b.jpeg" />
+    <Content Include="Images\b287c229-6c7c-404a-b29b-d729530881b8.jpeg" />
+    <Content Include="Images\b368d002-71e3-4358-a6ec-d1c004bbe3f6.jpeg" />
+    <Content Include="Images\b3b06c4d-4eaf-4d3e-9fc0-9f9b8bcd258f.jpeg" />
+    <Content Include="Images\b3c639a7-5d83-4788-937d-12b07a0354f3.png" />
+    <Content Include="Images\b7127450-8d58-4bea-b0f2-6a0a9bcc9027.png" />
+    <Content Include="Images\b7e05e20-6b91-4389-967b-1e2d748dc002.jpeg" />
+    <Content Include="Images\b98707f6-30ce-4a76-9671-9e27656c4cfe.jpeg" />
+    <Content Include="Images\bd47c1e9-987a-440f-a141-c0ac152c7949.png" />
+    <Content Include="Images\beaba735-c1b4-42e1-b8a8-420144d3cb68.jpeg" />
+    <Content Include="Images\c2b3468f-58f4-48f0-8ade-4462adbac8eb.png" />
+    <Content Include="Images\c398d761-4267-4780-a58b-a58de9066d76.jpeg" />
+    <Content Include="Images\c4ad41ac-0edf-4e95-a24b-4e41b064ee69.png" />
+    <Content Include="Images\c575d70f-dfbb-4aea-9353-061257c33f55.jpeg" />
+    <Content Include="Images\c584d70b-2966-4f59-b837-b5ff1b1a4d5a.png" />
+    <Content Include="Images\c6a8f82a-9b2b-47a4-a835-c372c0831403.png" />
+    <Content Include="Images\c6c0876f-97f5-448f-97ce-b543e43a212d.png" />
+    <Content Include="Images\c7cc4921-fb66-49be-bf48-ba391f52256f.jpeg" />
+    <Content Include="Images\cd14ebc8-0245-439a-abc9-e398815da460.png" />
+    <Content Include="Images\cda6abc7-17fe-4d4f-8fec-089b2349ab73.jpeg" />
+    <Content Include="Images\ce7d0520-58f1-46a7-a2bb-bf3c09878bda.png" />
+    <Content Include="Images\ced4c076-1c81-4782-9877-c48d46d01373.png" />
+    <Content Include="Images\d052ff2d-9b69-4106-b784-8e915d26c835.png" />
+    <Content Include="Images\d0e2c70c-e129-43b0-885a-6b0fef6f6542.jpeg" />
+    <Content Include="Images\daa8ea38-88d4-4075-a4af-0e6d2aeb4eae.jpeg" />
+    <Content Include="Images\db81148c-361e-45e9-ac04-fc6db475cde1.jpeg" />
+    <Content Include="Images\dd3dc6e3-ed92-4428-8d05-c901b681a160.png" />
+    <Content Include="Images\dde6f4e0-2f56-48b8-854b-d8755ebec2cd.png" />
+    <Content Include="Images\df541eea-1b4b-4e15-8574-ab71e7f936c5.jpeg" />
+    <Content Include="Images\df7f36f0-2ffd-495c-b237-4f1bf35f283d.jpeg" />
+    <Content Include="Images\e2e4ef90-46e0-4110-a22f-0567ea42918e.jpeg" />
+    <Content Include="Images\e533a952-a43a-4c16-8591-52de598605b6.jpeg" />
+    <Content Include="Images\e6872322-ff5b-4edd-9a07-79f29a1715ef.png" />
+    <Content Include="Images\ea6522fe-1afb-463d-bfaf-13fa9fdaf3f9.jpeg" />
+    <Content Include="Images\ec51a59b-5d36-4b89-ad6f-45d151588a3e.jpeg" />
+    <Content Include="Images\ed1875f6-f9ee-49e0-ab94-25a471d97478.jpeg" />
+    <Content Include="Images\edac9edc-5624-4c65-87af-a67a9f2571ac.png" />
+    <Content Include="Images\ef28adeb-2e08-4859-91e8-5641aeff068a.jpeg" />
+    <Content Include="Images\f049873b-a998-43df-a26d-5f5696d0f5ee.jpeg" />
+    <Content Include="Images\f1725623-e7e5-4d36-920c-e9f564b7fdfb.jpeg" />
+    <Content Include="Images\f20a1e52-fd4c-4493-9079-2cf209e9a04e.jpeg" />
+    <Content Include="Images\f3e742aa-f73b-40aa-882f-848353d9bc04.jpeg" />
+    <Content Include="Images\f4f0cf83-23e7-47aa-9345-3e1b906f45b1.jpeg" />
+    <Content Include="Images\f7d05056-dbd5-4c44-9215-cc5c3d733b15.jpeg" />
+    <Content Include="Images\f8187ce4-7ebf-4622-8ea0-a9de9734d27f.jpeg" />
+    <Content Include="Images\f831c8fd-a15d-4da5-8e95-269e317b9be6.jpeg" />
+    <Content Include="Images\f91cac83-c74e-47f6-8f47-f608d497b547.jpeg" />
+    <Content Include="Images\fb28d3f4-6bfa-499c-b6f1-2e49920ff363.jpeg" />
+    <Content Include="Images\fd9e0cd5-995c-4936-913a-a2e568f8aeef.jpeg" />
+    <Content Include="Images\fdc0332b-92ae-4738-80b8-34c65334b845.jpeg" />
+    <Content Include="Images\fe223746-c1a0-4876-831e-0a88c4d89fd9.jpeg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="4.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.31.0" />
+    <PackageReference Include="MimeKit" Version="4.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.31.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\E_Commrce.BL\E_Commerce.BL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Images\" />
+    <Folder Include="wwwroot\" />
+    <Folder Include="wwwroot\" />
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+</Project>

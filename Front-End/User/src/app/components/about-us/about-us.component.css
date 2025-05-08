@@ -1,0 +1,344 @@
+/* About Page Styles */
+.about-page {
+  font-family: var(--font-primary);
+  color: var(--text-dark);
+}
+
+/* Section Styles */
+section {
+  padding: 5rem 0;
+}
+
+.section-header {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-family: var(--font-title);
+  color: var(--text-dark);
+}
+
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.section-divider span {
+  display: inline-block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--main-color);
+}
+
+/* Hero Section */
+.about-hero {
+  padding: 6rem 0;
+  background-color: var(--bg-white);
+}
+
+.about-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-family: var(--font-title);
+  color: var(--text-dark);
+}
+
+.about-subtitle {
+  font-size: 1.5rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  font-family: var(--font-primary);
+}
+
+.about-divider {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.about-divider span {
+  display: inline-block;
+  width: 80px;
+  height: 3px;
+  background-color: var(--main-color);
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.about-hero-image {
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.about-hero-image img {
+  width: 100%;
+  height: auto;
+  transition: transform var(--transition-normal);
+}
+
+.about-hero-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Story Section */
+.about-story {
+  background-color: var(--bg-white);
+}
+
+.story-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+.story-content p {
+  margin-bottom: 1.5rem;
+}
+
+/* Philosophy Section */
+.about-philosophy {
+  background-color: var(--light-color);
+}
+
+.philosophy-image {
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 2rem;
+}
+
+.philosophy-image img {
+  width: 100%;
+  height: auto;
+  transition: transform var(--transition-normal);
+}
+
+.philosophy-image:hover img {
+  transform: scale(1.05);
+}
+
+.philosophy-content {
+  padding: 0 2rem;
+}
+
+.philosophy-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+/* Features Section */
+.about-features {
+  background-color: var(--bg-white);
+}
+
+.feature-card {
+  padding: 2.5rem;
+  background-color: var(--bg-white);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  height: 100%;
+  border: 1px solid transparent;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--main-color);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  color: var(--main-color);
+  margin-bottom: 1.5rem;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+  font-family: var(--font-title);
+}
+
+.feature-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* Collections Section */
+.about-collections {
+  background-color: var(--light-color);
+}
+
+.collection-card {
+  position: relative;
+  margin-bottom: 2rem;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  height: 100%;
+}
+
+.collection-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+}
+
+.collection-image {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+}
+
+.collection-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.collection-card:hover .collection-image img {
+  transform: scale(1.1);
+}
+
+.collection-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  transition: background var(--transition-normal);
+  opacity: 0.9;
+}
+
+.collection-card:hover .collection-overlay {
+  background: linear-gradient(to top, rgba(10, 173, 10, 0.8) 0%, rgba(10, 173, 10, 0.6) 50%, rgba(10, 173, 10, 0.3) 100%);
+  opacity: 1;
+}
+
+.collection-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+  font-family: var(--font-title);
+  text-align: center;
+}
+
+/* Commitment Section */
+.about-commitment {
+  background-color: var(--bg-white);
+}
+
+.commitment-content {
+  padding: 0 2rem;
+}
+
+.commitment-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.commitment-cta {
+  margin-top: 2.5rem;
+}
+
+.commitment-image {
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.commitment-image img {
+  width: 100%;
+  height: auto;
+  transition: transform var(--transition-normal);
+}
+
+.commitment-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+  section {
+    padding: 4rem 0;
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .philosophy-content,
+  .commitment-content {
+    padding: 0;
+    margin-top: 2rem;
+  }
+
+  .collection-image {
+    height: 300px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  section {
+    padding: 3rem 0;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-subtitle {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  .collection-image {
+    height: 250px;
+  }
+
+  .collection-title {
+    font-size: 1.5rem;
+  }
+}

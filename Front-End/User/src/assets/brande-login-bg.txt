@@ -1,0 +1,5 @@
+Since I can't directly save the image file from the chat, please save the provided Brande login image to:
+
+Downloads\ecommerce-front\Ecommerce_Front-main\ForntEnd\src\assets\brande-login-bg.jpg
+
+The image features the Brande logo with a blue "B" followed by "rande" in dark text, with blue wave patterns at the bottom and light blue dots in the background.

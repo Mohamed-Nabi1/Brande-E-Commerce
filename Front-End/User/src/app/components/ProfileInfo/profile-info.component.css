@@ -1,0 +1,109 @@
+/* Profile Container Styles */
+.profile-container {
+  padding: 2rem 0;
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 80px);
+}
+
+/* Card Styles */
+.profile-card {
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: none;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1rem 1.5rem;
+}
+
+/* Avatar Styles */
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 0 auto 1.5rem;
+  border: 5px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  border-radius: 30px;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(13, 110, 253, 0.2);
+}
+
+.btn-outline-primary {
+  color: #0d6efd;
+  border-color: #0d6efd;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  border-radius: 30px;
+  transition: all 0.3s;
+}
+
+.btn-outline-primary:hover {
+  background-color: #0d6efd;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(13, 110, 253, 0.2);
+}
+
+/* List Group Styles */
+.list-group-item {
+  border: none;
+  padding: 1rem 1.5rem;
+  transition: background-color 0.3s;
+}
+
+.list-group-item:hover {
+  background-color: rgba(13, 110, 253, 0.05);
+}
+
+.list-group-item a {
+  color: #212529;
+  transition: color 0.3s;
+}
+
+.list-group-item:hover a {
+  color: #0d6efd;
+}
+
+/* Text Styles */
+.fw-bold {
+  font-weight: 600 !important;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .profile-container {
+    padding: 1rem 0;
+  }
+
+  .profile-card {
+    margin-bottom: 1.5rem;
+  }
+}

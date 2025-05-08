@@ -1,0 +1,338 @@
+<!-- Premium Hero Slider -->
+<div class="hero-slider">
+  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <!-- Slide 1 - Men's Collection -->
+      <div class="carousel-item active" data-bs-interval="6000">
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1617137968427-85924c800a22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWVucyUyMGZhc2hpb258ZW58MHx8MHx8fDA%3D&w=1000&q=80');">
+          <div class="container">
+            <div class="hero-content">
+              <span class="hero-label animate__animated animate__fadeInDown">New Season Arrivals</span>
+              <h1 class="hero-title animate__animated animate__fadeInDown">{{categories[0].name}}'s Autumn Collection</h1>
+              <p class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s">Elevate your wardrobe with our premium essentials crafted for the modern gentleman</p>
+              <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-2s">
+                <a routerLink="/category/{{categories[0].id}}" class="btn btn-primary btn-lg">Discover Now</a>
+                <a routerLink="/products" class="btn btn-outline-light btn-lg ms-3">View All</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 - Kids Collection -->
+      <div class="carousel-item" data-bs-interval="6000">
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1578897367107-2828e351c8a8?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGtpZHMlMjBmYXNoaW9ufGVufDB8fDB8fHww');">
+          <div class="container">
+            <div class="hero-content">
+              <span class="hero-label animate__animated animate__fadeInDown">Playful & Practical</span>
+              <h1 class="hero-title animate__animated animate__fadeInDown">{{categories[2].name}}'s Exclusive Collection</h1>
+              <p class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s">Thoughtfully designed pieces that combine comfort, durability, and style for the little ones</p>
+              <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-2s">
+                <a routerLink="/category/{{categories[2].id}}" class="btn btn-primary btn-lg">Discover Now</a>
+                <a routerLink="/products" class="btn btn-outline-light btn-lg ms-3">View All</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 - Women's Collection -->
+      <div class="carousel-item" data-bs-interval="6000">
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1581044777550-4cfa60707c03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZmFzaGlvbiUyMG1vZGVsfGVufDB8fDB8fHww&w=1000&q=80');">
+          <div class="container">
+            <div class="hero-content">
+              <span class="hero-label animate__animated animate__fadeInDown">Timeless Elegance</span>
+              <h1 class="hero-title animate__animated animate__fadeInDown">{{categories[1].name}}'s Signature Collection</h1>
+              <p class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s">Curated pieces that embody sophistication and confidence for the contemporary woman</p>
+              <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-2s">
+                <a routerLink="/category/{{categories[1].id}}" class="btn btn-primary btn-lg">Discover Now</a>
+                <a routerLink="/products" class="btn btn-outline-light btn-lg ms-3">View All</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+    <!-- Carousel Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+  </div>
+</div>
+
+<!-- Brand Values Section -->
+<section class="brand-values-section py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="value-card text-center animate-on-scroll animate-fadeInUp animate-delay-100">
+          <div class="value-icon animate-float">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h3 class="value-title">Sustainable Materials</h3>
+          <p class="value-text">Our commitment to the environment is reflected in our carefully sourced materials and ethical production processes.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="value-card text-center animate-on-scroll animate-fadeInUp animate-delay-200">
+          <div class="value-icon animate-float">
+            <i class="fas fa-award"></i>
+          </div>
+          <h3 class="value-title">Premium Quality</h3>
+          <p class="value-text">Each piece is crafted with meticulous attention to detail, ensuring exceptional quality that stands the test of time.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="value-card text-center animate-on-scroll animate-fadeInUp animate-delay-300">
+          <div class="value-icon animate-float">
+            <i class="fas fa-shipping-fast"></i>
+          </div>
+          <h3 class="value-title">Worldwide Shipping</h3>
+          <p class="value-text">We deliver our exclusive collections to fashion enthusiasts around the globe with care and efficiency.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Curated Collections Section -->
+<section class="categories-section py-5">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header text-center mb-5">
+      <h2 class="section-title animate-on-scroll animate-fadeInDown">Curated Collections</h2>
+      <div class="section-divider animate-on-scroll animate-zoomIn animate-delay-200">
+        <span></span>
+      </div>
+      <p class="section-subtitle animate-on-scroll animate-fadeInUp animate-delay-300">
+        Explore our meticulously curated collections designed to elevate your personal style.
+        Each piece tells a story of craftsmanship and contemporary elegance.
+      </p>
+    </div>
+
+    <!-- Categories Grid -->
+    <div class="row g-4">
+      <div *ngFor="let c of categories; let i = index" class="col-md-4">
+        <div class="category-card animate-on-scroll"
+             [ngClass]="{'category-card-alt': i % 2 !== 0,
+                        'animate-fadeInLeft': i === 0,
+                        'animate-fadeInUp': i === 1,
+                        'animate-fadeInRight': i === 2,
+                        'animate-delay-100': i === 0,
+                        'animate-delay-200': i === 1,
+                        'animate-delay-300': i === 2}">
+          <div class="category-badge">
+            <span>{{c.name === 'Men' ? 'SS24' : c.name === 'Women' ? 'NEW IN' : 'EXCLUSIVE'}}</span>
+          </div>
+          <div class="category-image">
+            <img *ngIf="c.name === 'Men'" src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWVucyUyMGZhc2hpb24lMjBjbG90aGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="{{c.name}}" class="img-fluid">
+            <img *ngIf="c.name === 'Women'" src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d29tZW5zJTIwZmFzaGlvbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="{{c.name}}" class="img-fluid">
+            <img *ngIf="c.name === 'Kids'" src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8a2lkcyUyMGZhc2hpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="{{c.name}}" class="img-fluid">
+            <div class="category-overlay">
+              <div class="category-content">
+                <div class="category-meta">
+                  <span class="category-season">{{c.name === 'Men' ? 'Spring/Summer 2024' : c.name === 'Women' ? 'New Arrivals' : 'Limited Edition'}}</span>
+                </div>
+                <h3 class="category-title">{{c.name}}'s Collection</h3>
+                <p class="category-description">
+                  {{c.name === 'Men' ? 'Refined essentials for the modern gentleman' :
+                    c.name === 'Women' ? 'Elegant pieces for the contemporary woman' :
+                    'Playful designs for the little ones'}}
+                </p>
+                <div class="category-action">
+                  <a routerLink="/category/{{c.id}}" class="btn-shop-collection btn-dark-bg">
+                    Shop Collection <span class="btn-icon"><i class="fas fa-long-arrow-alt-right"></i></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="category-footer">
+            <div class="category-stats">
+              <span class="category-items">{{c.name === 'Men' ? '48' : c.name === 'Women' ? '64' : '36'}} Items</span>
+              <span class="category-divider">|</span>
+              <span class="category-new">{{c.name === 'Men' ? '12' : c.name === 'Women' ? '18' : '8'}} New</span>
+            </div>
+            <div class="category-link">
+              <a routerLink="/category/{{c.id}}">
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Signature Collection Feature -->
+<section class="signature-collection py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="editorial-image animate-on-scroll animate-fadeInLeft">
+          <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGZhc2hpb24lMjBzdHlsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Editorial" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="editorial-content animate-on-scroll animate-fadeInRight">
+          <span class="editorial-label animate-on-scroll animate-fadeInUp animate-delay-100">Style Journal</span>
+          <h2 class="editorial-title animate-on-scroll animate-fadeInUp animate-delay-200">The Art of Effortless Style</h2>
+          <p class="editorial-text animate-on-scroll animate-fadeInUp animate-delay-300">
+            In our latest editorial, we explore the nuanced approach to contemporary dressing that balances sophistication with ease.
+            Discover how thoughtfully selected pieces can form the foundation of a versatile wardrobe that adapts to your evolving lifestyle.
+          </p>
+          <a routerLink="/products" class="btn-shop-collection btn-light-bg animate-on-scroll animate-fadeInUp animate-delay-400">
+            Read More <span class="btn-icon"><i class="fas fa-long-arrow-alt-right"></i></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section py-5 bg-light">
+  <div class="container">
+    <!-- Men's Collection Feature -->
+    <div class="feature-block">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 order-lg-2">
+          <div class="feature-content">
+            <span class="feature-badge">Artisanal Craftsmanship</span>
+            <h2 class="feature-title">The Modern Gentleman's Wardrobe</h2>
+            <p class="feature-text">
+              Our men's collection embodies the essence of contemporary masculinity with a focus on refined silhouettes and exceptional materials.
+              Each piece is designed to seamlessly transition from day to evening, offering versatility without compromising on sophistication.
+            </p>
+            <ul class="feature-list">
+              <li><i class="fas fa-check-circle"></i> Tailored precision for impeccable fit</li>
+              <li><i class="fas fa-check-circle"></i> Luxurious fabrics with subtle texture</li>
+              <li><i class="fas fa-check-circle"></i> Thoughtful details that elevate every look</li>
+            </ul>
+            <a routerLink="/category/edc6b9e0-9252-4e9d-b4d3-9203b6de2583" class="btn-shop-collection btn-light-bg">
+              Shop Men's Collection <span class="btn-icon"><i class="fas fa-long-arrow-alt-right"></i></span>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="feature-image">
+            <img src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVuJTIwZmFzaGlvbiUyMG1vZGVsfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="Men's Collection" class="img-fluid rounded">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="section-divider my-5">
+      <span></span>
+    </div>
+
+    <!-- Women's Collection Feature -->
+    <div class="feature-block">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="feature-content">
+            <span class="feature-badge">Effortless Elegance</span>
+            <h2 class="feature-title">The Contemporary Woman's Edit</h2>
+            <p class="feature-text">
+              Our women's collection celebrates the multifaceted nature of femininity through fluid silhouettes and thoughtful design.
+              From statement pieces to refined essentials, each garment is created to inspire confidence and self-expression.
+            </p>
+            <ul class="feature-list">
+              <li><i class="fas fa-check-circle"></i> Fluid silhouettes that flatter every form</li>
+              <li><i class="fas fa-check-circle"></i> Innovative textiles with exceptional drape</li>
+              <li><i class="fas fa-check-circle"></i> Versatile pieces for the dynamic lifestyle</li>
+            </ul>
+            <a routerLink="/category/{{categories[1].id}}" class="btn-shop-collection btn-light-bg">
+              Shop Women's Collection <span class="btn-icon"><i class="fas fa-long-arrow-alt-right"></i></span>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="feature-image">
+            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHdvbWVuJTIwZmFzaGlvbiUyMG1vZGVsfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="Women's Collection" class="img-fluid rounded">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lookbook & Style Inspiration Section -->
+<section class="lookbook-section py-5">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <h2 class="section-title animate-on-scroll animate-fadeInDown">Seasonal Lookbook</h2>
+      <div class="section-divider animate-on-scroll animate-zoomIn animate-delay-200">
+        <span></span>
+      </div>
+      <p class="section-subtitle animate-on-scroll animate-fadeInUp animate-delay-300">
+        Discover styling inspiration from our latest collections, curated for the modern lifestyle.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="lookbook-card animate-on-scroll animate-fadeInLeft animate-delay-100">
+          <div class="lookbook-image">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFzaGlvbiUyMHdvbWFufGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="Urban Chic" class="img-fluid">
+            <div class="lookbook-overlay">
+              <div class="lookbook-content">
+                <h3 class="lookbook-title">Urban Chic</h3>
+                <p class="lookbook-text">Contemporary essentials for the city dweller</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="lookbook-card animate-on-scroll animate-fadeInUp animate-delay-200">
+          <div class="lookbook-image">
+            <img src="https://images.unsplash.com/photo-1550614000-4895a10e1bfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZhc2hpb24lMjBtYW58ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="Weekend Getaway" class="img-fluid">
+            <div class="lookbook-overlay">
+              <div class="lookbook-content">
+                <h3 class="lookbook-title">Weekend Getaway</h3>
+                <p class="lookbook-text">Effortless style for your leisure moments</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="lookbook-card animate-on-scroll animate-fadeInRight animate-delay-300">
+          <div class="lookbook-image">
+            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZmFzaGlvbiUyMHdvbWFufGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="Evening Elegance" class="img-fluid">
+            <div class="lookbook-overlay">
+              <div class="lookbook-content">
+                <h3 class="lookbook-title">Evening Elegance</h3>
+                <p class="lookbook-text">Sophisticated ensembles for special occasions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <a routerLink="/products" class="btn-shop-collection btn-light-bg">
+        Shop Full Collection <span class="btn-icon"><i class="fas fa-long-arrow-alt-right"></i></span>
+      </a>
+    </div>
+  </div>
+</section>

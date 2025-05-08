@@ -1,0 +1,20 @@
+LOGO IMPLEMENTATION INSTRUCTIONS
+
+1. Save the provided Brande logo image to:
+   Downloads\ecommerce-front\Ecommerce_Front-main\ForntEnd\src\assets\brande-logo.png
+
+2. The code has been updated to reference this logo file in:
+   - Header component (for the main navigation)
+   - Index.html (for the favicon)
+
+3. If you need to adjust the logo size, you can modify the width attribute in:
+   Downloads\ecommerce-front\Ecommerce_Front-main\ForntEnd\src\app\components\header\header.component.html
+
+4. The logo features:
+   - A blue "B" 
+   - "rande" in dark gray text
+   - A closing parenthesis
+   - Clean, modern design suitable for a luxury fashion brand
+
+5. If you need to make further adjustments to the logo styling, you can modify:
+   Downloads\ecommerce-front\Ecommerce_Front-main\ForntEnd\src\app\components\header\header.component.css

@@ -1,0 +1,13 @@
+.custom-button {
+    background-color: gainsboro;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .custom-button:hover {
+    background-color: gainsboro;
+    color: white;
+  }
+  

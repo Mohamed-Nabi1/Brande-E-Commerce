@@ -1,0 +1,120 @@
+<!-- Modern Login Page -->
+<div class="auth-page login-page">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="auth-card">
+          <div class="row g-0">
+            <!-- Left Side - Brande Design -->
+            <div class="col-md-6 auth-image-container d-none d-md-block">
+              <div class="auth-image brande-login-bg">
+                <!-- Decorative Dots -->
+                <div class="dot dot1"></div>
+                <div class="dot dot2"></div>
+                <div class="dot dot3"></div>
+                <div class="dot dot4"></div>
+                <div class="dot dot5"></div>
+
+                <!-- Brande Logo -->
+                <div class="brande-logo-container">
+                  <div class="brande-logo-login">
+                    <span class="logo-b">B</span><span class="logo-text">rande</span><span class="logo-paren">)</span>
+                  </div>
+                </div>
+
+                <!-- Wave Animation -->
+                <div class="wave-container">
+                  <div class="wave wave1"></div>
+                  <div class="wave wave2"></div>
+                </div>
+
+                <!-- Welcome Message -->
+                <div class="auth-quote">
+                  <h3>Welcome Back!</h3>
+                  <p>Sign in to access your account and continue your shopping journey.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Side - Form -->
+            <div class="col-md-6">
+              <div class="auth-form-container">
+                <div class="auth-header">
+                  <h2 class="auth-title">Sign In</h2>
+                  <p class="auth-subtitle">Welcome back! Please enter your details.</p>
+                </div>
+
+                <form class="auth-form" [formGroup]="loginFrm" (ngSubmit)="login()">
+                  <!-- Alert for invalid credentials -->
+                  <div *ngIf="mess" class="alert alert-danger" role="alert">
+                    <i class="fas fa-exclamation-circle me-2"></i>
+                    Invalid email or password. Please try again.
+                  </div>
+
+                  <!-- Email Field -->
+                  <div class="form-floating mb-3">
+                    <input
+                      type="email"
+                      id="email"
+                      class="form-control"
+                      placeholder="name@example.com"
+                      formControlName="email"
+                      (keypress)="keyPressMinLength($event, 35)"
+                      [ngClass]="{'is-invalid': loginFrm.get('email')?.errors && (loginFrm.get('email')?.dirty || loginFrm.get('email')?.touched)}"
+                    >
+                    <label for="email">Email address</label>
+                    <div class="invalid-feedback">
+                      <span *ngIf="loginFrm?.get('email')?.errors?.['required']">Email is required</span>
+                      <span *ngIf="loginFrm?.get('email')?.errors?.['pattern']">Please enter a valid email address</span>
+                    </div>
+                  </div>
+
+                  <!-- Password Field -->
+                  <div class="form-floating mb-3 password-field">
+                    <input
+                      [type]="showPassword ? 'text' : 'password'"
+                      id="password"
+                      class="form-control"
+                      placeholder="Password"
+                      formControlName="password"
+                      (keypress)="keyPressMinLength($event, 25)"
+                      [ngClass]="{'is-invalid': loginFrm.get('password')?.errors && (loginFrm.get('password')?.dirty || loginFrm.get('password')?.touched)}"
+                    >
+                    <label for="password">Password</label>
+                    <button type="button" class="password-toggle" (click)="togglePassword()">
+                      <i [ngClass]="showPassword ? 'fa fa-eye' : 'fa fa-eye-slash'"></i>
+                    </button>
+                    <div class="invalid-feedback">
+                      <span *ngIf="loginFrm?.get('password')?.errors?.['required']">Password is required</span>
+                    </div>
+                  </div>
+
+                  <!-- Remember Me & Forgot Password -->
+                  <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="rememberMe">
+                      <label class="form-check-label" for="rememberMe">
+                        Remember me
+                      </label>
+                    </div>
+                    <a routerLink="/resetPassword" class="forgot-password">Forgot password?</a>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <button type="submit" class="btn btn-brande w-100 mb-3">
+                    <i class="fas fa-sign-in-alt me-2"></i> Sign In
+                  </button>
+
+                  <!-- Register Link -->
+                  <div class="auth-footer">
+                    <p>Don't have an account? <a routerLink="/register" class="register-link">Sign up</a></p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

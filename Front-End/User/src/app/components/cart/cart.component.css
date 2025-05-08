@@ -1,0 +1,151 @@
+/* Cart Component Styles */
+.cart-table {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 2rem;
+}
+
+/* Cart Summary Styles */
+.cart-summary {
+  margin-top: 2rem;
+}
+
+.card {
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-normal);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--on-surface);
+}
+
+/* Button Styles */
+.btn-checkout {
+  background-color: rgb(0, 91, 91) !important;
+  color: white !important;
+}
+
+.btn-delete {
+  background-color: rgb(0, 91, 91) !important;
+  color: white !important;
+}
+
+/* Product Image Styles */
+.product-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image {
+  max-width: 150px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--border-radius-sm);
+  transition: transform var(--transition-normal);
+}
+
+.product-image:hover {
+  transform: scale(1.05);
+}
+
+/* Quantity Controls */
+.quantity-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.quantity-input {
+  width: 50px;
+  min-width: 50px;
+  text-align: center;
+  margin: 0 5px;
+}
+
+.quantity-warning {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1199.98px) {
+  .product-image {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .product-image {
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .product-image {
+    max-width: 80px;
+  }
+
+  .mat-header-cell, .mat-cell {
+    padding: 8px;
+  }
+
+  .quantity-input {
+    width: 40px;
+    min-width: 40px;
+  }
+
+  .cart-summary .card {
+    margin-top: 1rem;
+  }
+
+  .cart-summary .col-md-6.offset-md-6 {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .product-image {
+    max-width: 70px;
+  }
+
+  .mat-header-cell, .mat-cell {
+    padding: 4px;
+    font-size: 0.9rem;
+  }
+
+  .quantity-container {
+    flex-direction: column;
+  }
+
+  .quantity-input {
+    width: 35px;
+    min-width: 35px;
+    margin: 5px 0;
+  }
+
+  /* Make table more compact on very small screens */
+  .mat-icon-button {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .btn-checkout, .btn-delete {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "products": [
+    {
+      "id": "f9717e8e-5de9-4e2e-83d0-5ae8a9f496d1",
+      "name": "Shirt",
+      "description": "Description of Product 1",
+      "price": 19.99,
+      "discount": 0,
+      "rate": 0,
+      "productImages": [
+        {
+          "productId": "f9717e8e-5de9-4e2e-83d0-5ae8a9f496d1",
+          "imageURL": "https://example.com/product1/image1.jpg"
+        },
+        {
+          "productId": "f9717e8e-5de9-4e2e-83d0-5ae8a9f496d1",
+          "imageURL": "https://example.com/product1/image2.jpg"
+        }
+      ],
+      "productColorSizeQuantity": [
+        {
+          "productId": "f9717e8e-5de9-4e2e-83d0-5ae8a9f496d1",
+          "color": "Red",
+          "size": "M",
+          "quantity": 10
+        },
+        {
+          "productId": "f9717e8e-5de9-4e2e-83d0-5ae8a9f496d1",
+          "color": "Blue",
+          "size": "L",
+          "quantity": 5
+        }
+      ],
+      "reviews": [
+        {
+          "customerId": "07d96ed8-155d-49c7-a77a-615f109d77c3",
+          "productId": "f9717e8e-5de9-4e2e-83d0-5ae8a9f496d1",
+          "description": "Great shirt!",
+          "rate": 5,
+          "createdTime": "2023-06-23T10:30:00Z"
+        },
+        {
+          "customerId": "c7d3e80a-7a4a-4c54-91a6-89c0df051c94",
+          "productId": "f9717e8e-5de9-4e2e-83d0-5ae8a9f496d1",
+          "description": "Nice color but small in size.",
+          "rate": 4,
+          "createdTime": "2023-06-22T14:45:00Z"
+        }
+      ]
+    },
+    {
+      "id": "28f790a4-4d62-4a74-a7f4-65c730b5a65f",
+      "name": "Product 2",
+      "description": "Description of Product 2",
+      "price": 29.99,
+      "discount": 0,
+      "rate": 0,
+      "productImages": [
+        {
+          "productId": "28f790a4-4d62-4a74-a7f4-65c730b5a65f",
+          "imageURL": "https://example.com/product2/image1.jpg"
+        }
+      ],
+      "productColorSizeQuantity": [
+        {
+          "productId": "28f790a4-4d62-4a74-a7f4-65c730b5a65f",
+          "color": "Black",
+          "size": "S",
+          "quantity": 8
+        },
+        {
+          "productId": "28f790a4-4d62-4a74-a7f4-65c730b5a65f",
+          "color": "White",
+          "size": "M",
+          "quantity": 12
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "id": "ab8422b2-8213-4c62-8e69-1a0cb2d465d2",
+      "name": "Product 3",
+      "description": "Description of Product 3",
+      "price": 39.99,
+      "discount": 0,
+      "rate": 0,
+      "productImages": [
+        {
+          "productId": "ab8422b2-8213-4c62-8e69-1a0cb2d465d2",
+          "imageURL": "https://example.com/product3/image2.jpg"
+        }
+      ],
+      "productColorSizeQuantity": [
+        {
+          "productId": "ab8422b2-8213-4c62-8e69-1a0cb2d465d2",
+          "color": "Green",
+          "size": "L",
+          "quantity": 7
+        },
+        {
+          "productId": "ab8422b2-8213-4c62-8e69-1a0cb2d465d2",
+          "color": "Yellow",
+          "size": "XL",
+          "quantity": 3
+        }
+      ],
+      "reviews": [
+        {
+          "customerId": "74f5b2b3-3d10-4a85-93b5-8c6d0c992bb8",
+          "productId": "ab8422b2-8213-4c62-8e69-1a0cb2d465d2",
+          "description": "Amazing product!",
+          "rate": 5,
+          "createdTime": "2023-06-23T16:15:00Z"
+        }
+      ]
+    }
+  ]
+}

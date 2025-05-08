@@ -1,0 +1,205 @@
+<!-- Header Spacer -->
+<div style="height: 80px"></div>
+
+<!-- Modern Navbar with New Style Guide -->
+<header class="header-area">
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand" routerLink="">
+        <div class="brande-logo">
+          <span class="logo-b">B</span><span class="logo-text">rande</span><span class="logo-paren">)</span>
+        </div>
+      </a>
+
+      <!-- Mobile Toggle Button -->
+      <button class="navbar-toggler d-lg-none" type="button" (click)="toggleMobileNav()"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Search Form - Visible on larger screens -->
+      <div class="search-form d-none d-lg-flex">
+        <div class="input-group">
+          <input type="text" class="form-control" [(ngModel)]="searchQuery" placeholder="Search for products..." aria-label="Search" (keyup.enter)="search()">
+          <button class="btn btn-primary" type="button" (click)="search()">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Navigation Links - Desktop -->
+      <div class="navbar-collapse d-none d-lg-flex" id="navbarNav">
+        <!-- Main Navigation -->
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+              <i class="fas fa-home"></i> Home
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-tshirt"></i> Categories
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+              <li><a class="dropdown-item cursor-pointer" (click)="navigateToCategory('edc6b9e0-9252-4e9d-b4d3-9203b6de2583')">Men</a></li>
+              <li><a class="dropdown-item cursor-pointer" (click)="navigateToCategory('a6c4de53-33c5-48e1-9f21-5649726d2a3d')">Women</a></li>
+              <li><a class="dropdown-item cursor-pointer" (click)="navigateToCategory('52d40b0a-7039-4bc6-899d-0c36adff6b8f')">Kids</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item cursor-pointer" (click)="navigateToAllProducts()">All Products</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/aboutUs" routerLinkActive="active">
+              <i class="fas fa-info-circle"></i> About Us
+            </a>
+          </li>
+        </ul>
+
+        <!-- User Actions -->
+        <ul class="navbar-nav user-actions">
+          <!-- Wishlist Icon with Badge -->
+          <li class="nav-item">
+            <a class="nav-link icon-link w-40 wishlist-icon-container" routerLink="/wishList" routerLinkActive="active">
+              <i class="fas fa-heart"></i>
+              <span class="wishlist-badge" *ngIf="wishlistItemsCount > 0">{{ wishlistItemsCount }}</span>
+              <span class="visually-hidden">Wishlist</span>
+            </a>
+          </li>
+
+          <!-- Cart Icon with Badge -->
+          <li class="nav-item">
+            <a class="nav-link icon-link w-40 cart-icon-container" routerLink="/cart" routerLinkActive="active">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-badge" *ngIf="cartItemsCount > 0">{{ cartItemsCount }}</span>
+              <span class="visually-hidden">Cart</span>
+            </a>
+          </li>
+
+          <!-- Not Logged In: Login/Register -->
+          <li class="nav-item" *ngIf="!isLoggedIn">
+            <a class="btn btn-primary login-btn" routerLink="/login">
+              <i class="fas fa-sign-in-alt"></i> Login
+            </a>
+          </li>
+
+          <!-- Loading Customer Data -->
+          <li class="nav-item" *ngIf="isLoggedIn && !customer">
+            <a class="nav-link">
+              <i class="fas fa-spinner fa-spin"></i>
+            </a>
+          </li>
+
+          <!-- Logged In: User Dropdown -->
+          <li class="nav-item dropdown" *ngIf="isLoggedIn && customer">
+            <a class="nav-link dropdown-toggle user-dropdown" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-user-circle"></i>
+              <span class="d-none d-lg-inline-block ms-1">{{ customer.firstName }}</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+              <li class="dropdown-item-text text-main">Hello, {{ customer.firstName }} {{ customer.lastName }}</li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" routerLink="profileInfo"><i class="fas fa-user me-2 text-main"></i>My Profile</a></li>
+              <li><a class="dropdown-item" routerLink="orderDetails"><i class="fas fa-box me-2 text-main"></i>My Orders</a></li>
+              <li><a class="dropdown-item" routerLink="/wishList"><i class="fas fa-heart me-2 text-main"></i>My Wishlist</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item cursor-pointer" (click)="logOut()" routerLink="/home"><i class="fas fa-sign-out-alt me-2 text-main"></i>Log Out</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div class="mobile-nav d-lg-none" [ngClass]="{'mobile-nav-visible': isMobileNavVisible}">
+        <!-- Main Navigation -->
+        <ul class="navbar-nav mobile-main-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMobileNav()">
+              <i class="fas fa-home"></i> Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/products" (click)="toggleMobileNav()">
+              <i class="fas fa-tshirt"></i> All Products
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="navigateToCategory('edc6b9e0-9252-4e9d-b4d3-9203b6de2583'); toggleMobileNav()">
+              <i class="fas fa-male"></i> Men
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="navigateToCategory('a6c4de53-33c5-48e1-9f21-5649726d2a3d'); toggleMobileNav()">
+              <i class="fas fa-female"></i> Women
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="navigateToCategory('52d40b0a-7039-4bc6-899d-0c36adff6b8f'); toggleMobileNav()">
+              <i class="fas fa-child"></i> Kids
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/aboutUs" routerLinkActive="active" (click)="toggleMobileNav()">
+              <i class="fas fa-info-circle"></i> About Us
+            </a>
+          </li>
+        </ul>
+
+        <!-- User Actions -->
+        <ul class="navbar-nav mobile-user-actions">
+          <!-- Wishlist Icon with Badge -->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/wishList" routerLinkActive="active" (click)="toggleMobileNav()">
+              <i class="fas fa-heart"></i> Wishlist
+              <span class="badge bg-danger ms-1" *ngIf="wishlistItemsCount > 0">{{ wishlistItemsCount }}</span>
+            </a>
+          </li>
+
+          <!-- Cart Icon with Badge -->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/cart" routerLinkActive="active" (click)="toggleMobileNav()">
+              <i class="fas fa-shopping-cart"></i> Cart
+              <span class="badge bg-danger ms-1" *ngIf="cartItemsCount > 0">{{ cartItemsCount }}</span>
+            </a>
+          </li>
+
+          <!-- Not Logged In: Login/Register -->
+          <li class="nav-item" *ngIf="!isLoggedIn">
+            <a class="nav-link" routerLink="/login" (click)="toggleMobileNav()">
+              <i class="fas fa-sign-in-alt"></i> Login
+            </a>
+          </li>
+
+          <!-- Logged In User -->
+          <li class="nav-item" *ngIf="isLoggedIn && customer">
+            <a class="nav-link" routerLink="profileInfo" (click)="toggleMobileNav()">
+              <i class="fas fa-user"></i> My Profile
+            </a>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn && customer">
+            <a class="nav-link" routerLink="orderDetails" (click)="toggleMobileNav()">
+              <i class="fas fa-box"></i> My Orders
+            </a>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn && customer">
+            <a class="nav-link cursor-pointer" (click)="logOut(); toggleMobileNav()" routerLink="/home">
+              <i class="fas fa-sign-out-alt"></i> Log Out
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Search - Only visible on small screens -->
+  <div class="mobile-search d-lg-none">
+    <div class="container">
+      <div class="input-group">
+        <input type="text" class="form-control" [(ngModel)]="searchQuery" placeholder="Search for products..." aria-label="Search" (keyup.enter)="search()">
+        <button class="btn btn-primary" type="button" (click)="search()">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

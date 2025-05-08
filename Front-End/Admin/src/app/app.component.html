@@ -1,0 +1,116 @@
+<div class="container-fluid overflow-hidden">
+  <div class="row vh-100 overflow-auto">
+    <!-- Sidebar -->
+    <div class="col-12 col-md-3 col-xl-2 px-0 sidebar sticky-top">
+      <div class="d-flex flex-md-column flex-row flex-grow-1 align-items-center align-items-md-start py-3">
+        
+        <!-- Logo -->
+        <div class="logo-container w-100 text-center mb-4">
+          <a routerLink="/" class="d-block">
+            <img src="assets/brande-logo.svg" alt="Brande Logo" class="img-fluid" style="max-width: 150px;">
+          </a>
+        </div>
+
+        <!-- Navigation Menu -->
+        <ul class="nav nav-pills flex-md-column flex-row w-100 mb-auto">
+
+          <!-- Dashboard (Commented out) 
+          <li class="nav-item w-100 mb-2">
+            <a routerLink="/admin/rentoperations" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link px-3 py-2">
+              <i class="fas fa-tachometer-alt me-2"></i>
+              <span class="d-none d-md-inline">Dashboard</span>
+            </a>
+          </li>
+          -->
+
+          <!-- Products -->
+          <li class="nav-item w-100 mb-2">
+            <a routerLink="products" routerLinkActive="active" class="nav-link px-3 py-2">
+              <i class="fas fa-box me-2"></i>
+              <span class="d-none d-md-inline">Products</span>
+            </a>
+          </li>
+
+          <!-- Categories -->
+          <li class="nav-item w-100 mb-2">
+            <a routerLink="categories" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link px-3 py-2">
+              <i class="fas fa-tags me-2"></i>
+              <span class="d-none d-md-inline">Categories</span>
+            </a>
+          </li>
+
+          <!-- Orders -->
+          <li class="nav-item w-100 mb-2">
+            <a routerLink="orders" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link px-3 py-2">
+              <i class="fas fa-shopping-cart me-2"></i>
+              <span class="d-none d-md-inline">Orders</span>
+            </a>
+          </li>
+
+          <!-- Users -->
+          <li class="nav-item w-100 mb-2">
+            <a routerLink="blockusers" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link px-3 py-2">
+              <i class="fas fa-users me-2"></i>
+              <span class="d-none d-md-inline">Users</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Logout Button (Commented out)
+        <div class="mt-auto w-100 px-3 mb-3">
+          <button (click)="LogOut()" class="btn btn-outline-light w-100">
+            <i class="fas fa-sign-out-alt me-2"></i>
+            <span class="d-none d-md-inline">Logout</span>
+          </button>
+        </div>
+        -->
+
+      </div> <!-- /.d-flex -->
+    </div> <!-- /.sidebar -->
+
+    <!-- Main Content Area -->
+    <div class="col d-flex flex-column h-100">
+      
+      <!-- Header -->
+      <header class="bg-white shadow-sm py-3 px-4 d-flex justify-content-between align-items-center">
+        <div>
+          <h1 class="h4 mb-0">Brande Admin Dashboard</h1>
+        </div>
+        <div>
+          <button class="btn btn-sm btn-outline-secondary me-2 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="dropdown d-inline-block">
+            <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-user-circle me-1"></i>
+              <span>Admin</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+              <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>Profile</a></li>
+              <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#" (click)="LogOut()"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="flex-grow-1 p-4 bg-light">
+        <router-outlet></router-outlet>
+      </main>
+
+      <!-- Footer -->
+      <footer class="bg-white py-3 px-4 border-top">
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <small class="text-muted">© 2025 Brande. All rights reserved.</small>
+          </div>
+          <div>
+            <small class="text-muted">Version 1.0.0</small>
+          </div>
+        </div>
+      </footer>
+    </div> <!-- /.main content -->
+  </div>
+</div>

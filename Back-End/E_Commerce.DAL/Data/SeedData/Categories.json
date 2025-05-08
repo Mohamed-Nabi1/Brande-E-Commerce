@@ -1,0 +1,280 @@
+{
+  "categories": [
+    {
+      "id": "a947ea12-144c-4f8c-8a43-2e423f5825ff",
+      "name": "Men",
+      "description": "Category for Men",
+      "image": "https://example.com/men.jpg",
+      "parentCategoryId": null,
+      "subCategories": [
+        {
+          "id": "d0fd1b2c-9b44-47f9-bae5-499a2e1328e4",
+          "name": "Shirts",
+          "description": "Category for Men's Shirts",
+          "image": "https://example.com/men-shirts.jpg",
+          "parentCategoryId": "a947ea12-144c-4f8c-8a43-2e423f5825ff",
+          "subCategories": [],
+          "products": [
+            {
+              "id": "1e76e8e1-8c22-4ea2-a377-9b0ff1a24ef6",
+              "name": "Casual Shirt",
+              "description": "Comfortable and stylish casual shirt for men",
+              "price": 29.99,
+              "discount": 0,
+              "rate": 4.5,
+              "productImages": [
+                {
+                  "productID": "1e76e8e1-8c22-4ea2-a377-9b0ff1a24ef6",
+                  "imageURL": "https://example.com/shirt1.jpg"
+                },
+                {
+                  "productID": "1e76e8e1-8c22-4ea2-a377-9b0ff1a24ef6",
+                  "imageURL": "https://example.com/shirt2.jpg"
+                }
+              ],
+              "product_Color_Size_Quantity": [
+                {
+                  "productID": "1e76e8e1-8c22-4ea2-a377-9b0ff1a24ef6",
+                  "color": "Blue",
+                  "size": "M",
+                  "quantity": 10
+                },
+                {
+                  "productID": "1e76e8e1-8c22-4ea2-a377-9b0ff1a24ef6",
+                  "color": "Blue",
+                  "size": "L",
+                  "quantity": 5
+                }
+              ],
+              "reviews": [
+                {
+                  "id": "6d6e62ef-5a76-4aa2-8cc2-044acae24e8b",
+                  "customerID": "42dd0aae-34d7-4ef2-8a39-297cc6c3640d",
+                  "comment": "Great shirt! Fits perfectly.",
+                  "rating": 5
+                },
+                {
+                  "id": "a5a94060-418b-4d7b-b3cd-85f0ee5b4d89",
+                  "customerID": "a35e8f6b-7d21-4f95-bad6-6466c488fe3a",
+                  "comment": "Nice shirt. Good quality.",
+                  "rating": 4
+                }
+              ],
+              "carts": []
+            }
+          ]
+        },
+        {
+          "id": "5c148474-cc8b-4841-aefc-34a0d78122e8",
+          "name": "Pants",
+          "description": "Category for Men's Pants",
+          "image": "https://example.com/men-pants.jpg",
+          "parentCategoryId": "a947ea12-144c-4f8c-8a43-2e423f5825ff",
+          "subCategories": [],
+          "products": [
+            {
+              "id": "0c43c841-9825-4db1-997a-55a40246ae4e",
+              "name": "Jeans",
+              "description": "Stylish jeans for men",
+              "price": 49.99,
+              "discount": 0,
+              "rate": 4.2,
+              "productImages": [
+                {
+                  "productID": "0c43c841-9825-4db1-997a-55a40246ae4e",
+                  "imageURL": "https://example.com/jeans1.jpg"
+                },
+                {
+                  "productID": "0c43c841-9825-4db1-997a-55a40246ae4e",
+                  "imageURL": "https://example.com/jeans2.jpg"
+                }
+              ],
+              "product_Color_Size_Quantity": [
+                {
+                  "productID": "0c43c841-9825-4db1-997a-55a40246ae4e",
+                  "color": "Black",
+                  "size": "M",
+                  "quantity": 8
+                },
+                {
+                  "productID": "0c43c841-9825-4db1-997a-55a40246ae4e",
+                  "color": "Black",
+                  "size": "L",
+                  "quantity": 3
+                }
+              ],
+              "reviews": [
+                {
+                  "id": "e50e496e-501b-4943-aab5-520865dc06de",
+                  "customerID": "42dd0aae-34d7-4ef2-8a39-297cc6c3640d",
+                  "comment": "Good quality jeans. Comfortable to wear.",
+                  "rating": 4.5
+                },
+                {
+                  "id": "36f791dc-6e7d-41c3-823e-8a8c6d017dcf",
+                  "customerID": "a35e8f6b-7d21-4f95-bad6-6466c488fe3a",
+                  "comment": "Nice fit. Happy with the purchase.",
+                  "rating": 4
+                }
+              ],
+              "carts": []
+            }
+          ]
+        }
+      ],
+      "products": []
+    },
+    {
+      "id": "c6de536b-4e2c-4e29-af0f-b09819f9a2e7",
+      "name": "Kids",
+      "description": "Category for Kids",
+      "image": "https://example.com/kids.jpg",
+      "parentCategoryId": null,
+      "subCategories": [
+        {
+          "id": "b7a4c4ae-4d5a-4c7e-9dce-2d5ad9a2ef25",
+          "name": "Boys",
+          "description": "Category for Boys",
+          "image": "https://example.com/boys.jpg",
+          "parentCategoryId": "c6de536b-4e2c-4e29-af0f-b09819f9a2e7",
+          "subCategories": [],
+          "products": [
+            {
+              "id": "3ff38ee1-af15-4af6-95db-fd0b7d812a10",
+              "name": "T-Shirt",
+              "description": "Cool t-shirt for boys",
+              "price": 19.99,
+              "discount": 0,
+              "rate": 4,
+              "productImages": [
+                {
+                  "productID": "3ff38ee1-af15-4af6-95db-fd0b7d812a10",
+                  "imageURL": "https://example.com/tshirt1.jpg"
+                },
+                {
+                  "productID": "3ff38ee1-af15-4af6-95db-fd0b7d812a10",
+                  "imageURL": "https://example.com/tshirt2.jpg"
+                }
+              ],
+              "product_Color_Size_Quantity": [
+                {
+                  "productID": "3ff38ee1-af15-4af6-95db-fd0b7d812a10",
+                  "color": "Red",
+                  "size": "S",
+                  "quantity": 12
+                },
+                {
+                  "productID": "3ff38ee1-af15-4af6-95db-fd0b7d812a10",
+                  "color": "Red",
+                  "size": "M",
+                  "quantity": 7
+                }
+              ],
+              "reviews": [
+                {
+                  "id": "fbcf0f5a-7433-43c5-a7d4-48f83090a0df",
+                  "customerID": "42dd0aae-34d7-4ef2-8a39-297cc6c3640d",
+                  "comment": "My son loves this t-shirt!",
+                  "rating": 4.5
+                },
+                {
+                  "id": "f029e9ed-eb3f-476e-a0ff-2b11f118d1d6",
+                  "customerID": "a35e8f6b-7d21-4f95-bad6-6466c488fe3a",
+                  "comment": "Good quality. Fits well.",
+                  "rating": 4
+                }
+              ],
+              "carts": []
+            }
+          ]
+        },
+        {
+          "id": "6dd06b2f-6e6d-4d37-b03d-3ad650b8bc57",
+          "name": "Girls",
+          "description": "Category for Girls",
+          "image": "https://example.com/girls.jpg",
+          "parentCategoryId": "c6de536b-4e2c-4e29-af0f-b09819f9a2e7",
+          "subCategories": [],
+          "products": []
+        }
+      ],
+      "products": []
+    },
+    {
+      "id": "e8eb5f3d-c559-4f5a-8903-752f11a8e4e5",
+      "name": "Women",
+      "description": "Category for Women",
+      "image": "https://example.com/women.jpg",
+      "parentCategoryId": null,
+      "subCategories": [
+        {
+          "id": "9c545d36-5163-40b0-a144-d80e5f5b3e2f",
+          "name": "Dresses",
+          "description": "Category for Women's Dresses",
+          "image": "https://example.com/women-dresses.jpg",
+          "parentCategoryId": "e8eb5f3d-c559-4f5a-8903-752f11a8e4e5",
+          "subCategories": [],
+          "products": [
+            {
+              "id": "eefebd5d-b03a-4641-bb75-2710a2f68b0e",
+              "name": "Evening Gown",
+              "description": "Elegant evening gown for women",
+              "price": 99.99,
+              "discount": 10,
+              "rate": 4.8,
+              "productImages": [
+                {
+                  "productID": "eefebd5d-b03a-4641-bb75-2710a2f68b0e",
+                  "imageURL": "https://example.com/gown1.jpg"
+                },
+                {
+                  "productID": "eefebd5d-b03a-4641-bb75-2710a2f68b0e",
+                  "imageURL": "https://example.com/gown2.jpg"
+                }
+              ],
+              "product_Color_Size_Quantity": [
+                {
+                  "productID": "eefebd5d-b03a-4641-bb75-2710a2f68b0e",
+                  "color": "Red",
+                  "size": "S",
+                  "quantity": 5
+                },
+                {
+                  "productID": "eefebd5d-b03a-4641-bb75-2710a2f68b0e",
+                  "color": "Red",
+                  "size": "M",
+                  "quantity": 3
+                }
+              ],
+              "reviews": [
+                {
+                  "id": "08f1e6d6-293e-419d-9f18-0f775e459b34",
+                  "customerID": "42dd0aae-34d7-4ef2-8a39-297cc6c3640d",
+                  "comment": "Beautiful gown! Love the design.",
+                  "rating": 5
+                },
+                {
+                  "id": "a118956d-4a5d-4c13-b170-d33ebc73c2ab",
+                  "customerID": "a35e8f6b-7d21-4f95-bad6-6466c488fe3a",
+                  "comment": "Great quality. Fits perfectly.",
+                  "rating": 4.5
+                }
+              ],
+              "carts": []
+            }
+          ]
+        },
+        {
+          "id": "9c6e9b2b-58a6-48e1-9a40-6d759f2fba30",
+          "name": "Tops",
+          "description": "Category for Women's Tops",
+          "image": "https://example.com/women-tops.jpg",
+          "parentCategoryId": "e8eb5f3d-c559-4f5a-8903-752f11a8e4e5",
+          "subCategories": [],
+          "products": []
+        }
+      ],
+      "products": []
+    }
+  ]
+}
